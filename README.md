@@ -137,3 +137,4 @@ The following resources were used for the images and icons in this project:
 ---
 
 
+https://www.freepik.com/free-photo/selective-focus-shot-adorable-kooikerhondje-dog_14890582.htm#fromView=search&page=1&position=52&uuid=bb127149-1d48-414e-a819-fbbea33921b8

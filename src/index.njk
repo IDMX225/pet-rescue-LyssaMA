@@ -10,11 +10,6 @@ layout: 'base.njk'
     <p class="hero__description">
       The go-to place where you can meet your next favorite companion! We strive to give every pet a better life in a permanent loving home, and a lasting connection between you and your best furry friend.
     </p>
-    <div class="flex-group">
-      <a href="#featured-pets" class="btn btn--primary">Meet Our Pets</a>
-      <a href="#contact" class="btn btn--neutral">Get Involved</a>
-    </div>
-  </div>
 
   <!-- Full-width hero image -->
   <div class="hero__image-container">
@@ -30,11 +25,11 @@ layout: 'base.njk'
     <h3 class="section-subtitle text-center">Meet our dogs</h3>
     <div class="pets__list flow pets__list--grid">
       <div class="pet-card">
-        <img src="/images/brown dog.jpg" alt="Brown Dog" class="pet-card__image image-with-border">
-        <h3 class="pet-card__name">Max</h3>
-        <p class="pet-card__description">A friendly dog with lots of energy and love to give.</p>
+        <img src="/images/brown dog.jpg" alt="Brown and White Dog" class="pet-card__image image-with-border">
+        <h3 class="pet-card__name">Bella</h3>
+        <p class="pet-card__description">A sweet and playful girl looking for a forever home.</p>
         <div class="pet-card__actions">
-          <a href="/pets" class="btn btn--adopt">Adopt Max</a>
+          <a href="/pets" class="btn btn--adopt">Adopt Bella</a>
         </div>
       </div>
       <div class="pet-card">
@@ -70,7 +65,14 @@ layout: 'base.njk'
         </div>
       </div>
     </div>
-
+<div class="pet-card">
+  <img src="images/brown and white dog.jpg" alt="Brown and White Dog" class="pet-card__image image-with-border">
+  <h3 class="pet-card__name">Bella</h3>
+  <p class="pet-card__description">A sweet and gentle girl with a love for cuddles and playtime.</p>
+  <div class="pet-card__actions">
+    <a href="/pets" class="btn btn--adopt">Adopt Bella</a>
+  </div>
+</div>
     <!-- Cats Section -->
     <h3 class="section-subtitle text-center">Cats</h3>
     <div class="pets__list flow pets__list--grid">
@@ -112,12 +114,24 @@ layout: 'base.njk'
 
 <!-- Contact Section -->
 <section id="contact" class="contact">
-  <div class="container flow">
-    <h2 class="section-title text-center">Contact Us</h2>
-    <p class="section-description text-center">
-      We’d love to hear from you! Whether you want to adopt, volunteer, or simply get involved, we're here to help.
-    </p>
+  <div class="header-top">
+    <div class="container">
+      <div class="page-header__content">
+        <!-- Contact Title -->
+        <h2 class="site-title__main">Contact Us</h2>
+      </div>
+    </div>
+  </div>
 
+  <div class="header-bottom">
+    <div class="container">
+      <p class="section-description text-center">
+        We’d love to hear from you! Whether you want to adopt, volunteer, or simply get involved, we're here to help.
+      </p>
+    </div>
+  </div>
+
+  <div class="container flow">
     <form action="/submit-contact-form" method="POST" class="contact-form">
       <div class="form-group">
         <label for="name">Your Name</label>
@@ -138,11 +152,3 @@ layout: 'base.njk'
     </form>
   </div>
 </section>
-
-<!-- Smooth Scroll -->
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-

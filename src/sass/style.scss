@@ -1,15 +1,14 @@
 // Header Styles
-
 .page-header {
   width: 100%;
 }
 
 // Top Part (Blue Background with Logo and Site Title)
 .header-top {
-  background-color: #21B1E1; 
+  background-color: #21B1E1;
   padding: 10px 0;
   color: white;
-  text-align: center; 
+  text-align: center;
 
   .container {
     .page-header__content {
@@ -19,19 +18,18 @@
 
       .logo {
         img {
-          width: 120px; 
+          width: 120px;
         }
       }
 
       .site-title {
         .site-title__main {
           font-size: 3rem;
-          color: white; 
+          color: white;
 
           .site-title__sub {
             font-size: 1.5rem;
           }
-
         }
       }
     }
@@ -40,7 +38,7 @@
 
 // Bottom Part (Yellow Background with Nav Bar)
 .header-bottom {
-  background-color: #FED65D; 
+  background-color: #FED65D;
   padding: 10px 0;
   color: #333;
 
@@ -48,13 +46,13 @@
     .page-header__content {
       .grid-group {
         display: flex;
-        justify-content: center; 
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
 
         .nav-list {
           list-style-type: none;
           padding: 0;
-          display: flex; 
+          display: flex;
           margin: 0;
           font-weight: bold;
 
@@ -86,7 +84,6 @@
 /* //////////////////////
   General Styling
 ////////////////////// */
-
 body {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 2rem;
@@ -96,16 +93,13 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   line-height: 1.4;
 }
 
-h2,
-h3 {
+h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -113,8 +107,7 @@ strong {
   font-weight: bold;
 }
 
-section,
-.section {
+section, .section {
   padding: min(5vh, 5em) 0;
 }
 
@@ -184,22 +177,23 @@ section,
 /* //////////////////////
   Pet images Styling
 ////////////////////// */
-
 .pets__list--grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 100px; 
 }
 
 .pet-card {
+  max-width: 320px; 
+  height: auto;
+  margin: 0 auto;
   text-align: center;
 }
 
 .pet-card__image {
   width: 100%;
   height: auto;
-  border: #ffffff;
-
+  object-fit: cover;
 }
 
 .section-subtitle {
@@ -209,7 +203,7 @@ section,
 
 /* Style for Adopt Buttons */
 .btn--adopt {
-  background-color: #ec865d;
+  background-color: #f4a261;
   color: white;
   padding: 15px 30px;
   text-align: center;
@@ -240,8 +234,7 @@ section,
 /* //////////////////////
   Utility Classes
 ////////////////////// */
-
-.flow>*:where(:not(:first-child)) {
+.flow > *:where(:not(:first-child)) {
   margin-top: var(--space-md);
 }
 
@@ -268,7 +261,6 @@ section,
 /* //////////////////////
   Typography
 ////////////////////// */
-
 .article-title,
 .section-title {
   color: var(--color-primary);
@@ -285,8 +277,7 @@ section,
 /* //////////////////////
   Homepage
 ////////////////////// */
-
-.hero>div {
+.hero > div {
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
@@ -297,12 +288,6 @@ section,
 .hero__image {
   width: 100%;
   object-fit: cover;
-}
-
-@media (min-width: 45em) {
-  .hero>div {
-    grid-auto-flow: column;
-  }
 }
 
 .featured-articles {
@@ -317,7 +302,6 @@ section,
 /* //////////////////////
   Individual article page
 ////////////////////// */
-
 .main-article {
   margin-bottom: var(--space-xl);
 }
@@ -331,7 +315,6 @@ section,
 /* //////////////////////
   Article snippets
 ////////////////////// */
-
 .snippet {
   display: grid;
   gap: var(--space-sm);
@@ -382,84 +365,194 @@ section,
   color: var(--color-primary);
 }
 
-@media (min-width: 45em) {
-  .snippet {
-    grid-template-areas:
-      "title image"
-      "meta image"
-      "body image"
-      "button image";
-    grid-column-gap: var(--space-xl);
-    grid-template-columns: 1fr 40%;
-    grid-template-rows: min-content min-content min-content 1fr;
-  }
-}
-
 /* Base button styles */
 .btn {
-  cursor: pointer;                           /* Pointer cursor on hover */
-  text-decoration: none;                      /* No underlines for links */
-  display: inline-block;                      /* Inline block for positioning */
-  line-height: 1;                             
-  padding: var(--space-md) var(--space-xl);   
-  border-radius: var(--radius-sm);            
-  align-self: start;                         
-  justify-self: start;                        
-  transition: background-color 0.3s ease, transform 0.2s ease;  
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-sm);
+  align-self: start;
+  justify-self: start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Focus styles for all buttons */
 .btn:focus {
-  outline: 0.125em solid var(--color-primary);  
-  outline-offset: 0.25em;                      
+  outline: 0.125em solid var(--color-primary);
+  outline-offset: 0.25em;
 }
 
 /* Primary Button Styles */
 .btn--primary {
-  background-color: var(--color-accent);      
-  color: var(--color-neutral-100);            
-  padding: var(--space-md) var(--space-lg);  
-  border: none;                              
-  border-radius: var(--radius-md);            
-  font-size: var(--font-size-lg);            
-  font-weight: var(--font-weight-bold);      
-  cursor: pointer;                        
+  background-color: var(--color-accent);
+  color: var(--color-neutral-100);
+  padding: var(--space-md) var(--space-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
 }
 
-/* Hover and Focus States for Primary Button */
 .btn--primary:hover {
-  background-color: var(--color-secondary);  
-  transform: scale(1.05);                    
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
 }
 
 .btn--primary:focus {
-  outline: 2px solid var(--color-primary);   
+  outline: 2px solid var(--color-primary);
 }
 
 /* Neutral Button Styles */
 .btn--neutral {
-  background-color: var(--color-neutral-100); 
-  color: var(--color-neutral-700);            
-  font-weight: var(--font-weight-bold);       
-  border: 2px solid var(--color-neutral-700); 
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-700);
+  font-weight: var(--font-weight-bold);
+  border: 2px solid var(--color-neutral-700);
 }
 
-/* Hover and Focus States for Button */
 .btn--neutral:hover {
-  color: var(--color-neutral-100);            
-  background-color: var(--color-neutral-700); 
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-700);
 }
 
 .btn--neutral:focus {
-  background-color: var(--color-neutral-700); 
-  color: var(--color-neutral-100);           
-  border-color: var(--color-neutral-100);     
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-100);
+  border-color: var(--color-neutral-100);
 }
+
+/* //////////////////////
+  Footer
+////////////////////// */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+header, .site-footer {
+  flex-shrink: 0;
+}
+
+.site-footer {
+  background-color: #21B1E1;
+  padding: 1rem 0;
+  color: white;
+  text-align: center;
+  border-top: 5px solid #A3D9A5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-footer .footer-logo {
+  font-weight: bold;
+  text-decoration: underline;
+  color: white;
+  font-size: 1rem;
+}
+
+.site-footer .footer-logo:hover {
+  color: #FED65D;
+}
+
+.site-footer p {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* //////////////////////
+  Contact Section
+////////////////////// */
+.contact {
+  background-color: var(--color-neutral-100);
+  padding: 30px 0;
+
+  .section-title {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .section-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .contact-form {
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+
+      &:focus {
+        border-color: #5cb85c;
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background-color: #ec865d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #c7582d;
+      }
+    }
+  }
+}
+
+// Contact Logo
+.contact-logo {
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* //////////////////////
   Responsiveness
 ////////////////////// */
-
-/* Small Devices (Mobile) */
 @media (max-width: 767px) {
   body {
     font-size: 1.2rem;
@@ -487,219 +580,54 @@ section,
     margin: 0.5rem 0;
   }
 
-  .hero>div {
+  .hero > div {
     grid-template-columns: 1fr;
   }
-}
 
-/* Medium Devices (Tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .page-header__content {
-    flex-direction: row;
-    justify-content: space-between;
+  .btn--adopt {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
-  .site-title__main {
-    font-size: 3rem;
-  }
-
-  .site-title__sub {
-    font-size: 1.75rem;
-  }
-
-  .nav-list {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .hero>div {
-    grid-template-columns: repeat(2, 2fr);
-  }
-}
-
-/* Large Devices (Desktops) */
-@media (min-width: 1024px) {
-  body {
-    font-size: 1.5rem;
-  }
-
-  .page-header__content {
-    justify-content: space-between;
-  }
-
-  .site-title__main {
-    font-size: 3.75rem;
-  }
-
-  .site-title__sub {
-    font-size: 2rem;
-  }
-
-  .nav-list {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .hero>div {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Other Layout for Large Screens */
-@media (min-width: 1200px) {
-  .hero>div {
-    gap: 30px;
+  .site-footer p {
+    font-size: 1rem;
   }
 
   .container {
-    max-width: 1140px;
+    padding-inline: var(--space-sm);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 
-.contact {
-  background-color: var(--color-neutral-100);
-  padding: var(--space-xl) 0;
-}
-
-.contact-logo {
-  border-radius: 8px;
-  max-width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.section-title {
-  color: var(--color-primary);
-  font-size: var(--font-size-lg);
-  margin-top: var(--space-lg);
-}
-
-/* General Styles for Contact Page */
-.contact {
-  background-color: #5a5858;
-  padding: 40px 0;
-}
-
-.contact .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.contact .section-description {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 20px;
-}
-
-.contact-form .form-group label {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.contact-form .form-control {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact-form .form-control:focus {
-  border-color: #5cb85c;
-  outline: none;
-}
-
-.contact-form button {
-  padding: 12px 30px;
-  font-size: 1rem;
-  background-color: #ec865d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #ec865d;
-}
-
-.contact .container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-/* Responsiveness */
-@media (max-width: 767px) {
-  .contact-logo {
-    width: 100%;
-    height: auto;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-description {
+    padding: 2rem 0;
   }
 
-  .inner-container {
-    flex-direction: column;
-    text-align: center;
+  .pets__list--grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .form-container {
-    padding: var(--space-md);
+  .btn--adopt {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+
+  .container {
+    padding-inline: var(--space-md);
   }
 }
 
-/* //////////////////////
-  Footer
-  (make it sticky)
-////////////////////// */
+@media (min-width: 1024px) {
+  .hero-description {
+    padding: 5rem 0;
+  }
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-body>main {
-  flex: 1 0 auto;
-}
-
-header,
-.site-footer {
-  flex-shrink: 0;
-}
-
-/* //////////////////////
-  Footer Styling
-////////////////////// */
-
-.site-footer {
-  background-color: #21B1E1;
-  padding: 2rem 0;
-  color: white;
-  text-align: center;
-  border-top: 5px solid #A3D9A5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.site-footer .footer-logo {
-  font-weight: bold;
-  text-decoration: underline;
-  color: white;
-  font-size: 1rem;
-}
-
-.site-footer .footer-logo:hover {
-  color: #FED65D;
-}
-
-.site-footer p {
-  color: white;
-  font-size: 1rem;
-  margin: 0;
+  .btn--adopt {
+    font-size: 18px;
+    padding: 15px 40px;
+  }
 }
