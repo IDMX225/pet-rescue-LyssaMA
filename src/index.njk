@@ -6,7 +6,7 @@ layout: 'base.njk'
 <section class="hero">
   <!-- Heading -->
   <div class="container hero__text">
-    <h1 class="section-title large-text">Welcome to Our Pet Rescue</h1> 
+    <h1 class="section-title large-text">Welcome to Our Pet Rescue!</h1> 
     <p class="hero__description">
       The go-to place where you can meet your next favorite companion! We strive to give every pet a better life in a permanent loving home, and a lasting connection between you and your best furry friend.
     </p>
@@ -65,16 +65,9 @@ layout: 'base.njk'
         </div>
       </div>
     </div>
-<div class="pet-card">
-  <img src="images/brown and white dog.jpg" alt="Brown and White Dog" class="pet-card__image image-with-border">
-  <h3 class="pet-card__name">Bella</h3>
-  <p class="pet-card__description">A sweet and gentle girl with a love for cuddles and playtime.</p>
-  <div class="pet-card__actions">
-    <a href="/pets" class="btn btn--adopt">Adopt Bella</a>
-  </div>
-</div>
+    </div>
     <!-- Cats Section -->
-    <h3 class="section-subtitle text-center">Cats</h3>
+    <h3 class="section-subtitle text-center">Meet our Cats</h3>
     <div class="pets__list flow pets__list--grid">
       <div class="pet-card">
         <img src="/images/grey cat.jpg" alt="Grey Cat" class="pet-card__image image-with-border">
@@ -152,3 +145,11 @@ layout: 'base.njk'
     </form>
   </div>
 </section>
+
+<!-- JavaScript for Hamburger Menu -->
+<script>
+  document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.hamburger-menu').classList.toggle('open');
+    document.querySelector('.nav-list').classList.toggle('open');
+  });
+</script>
