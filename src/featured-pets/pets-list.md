@@ -6,8 +6,10 @@ permalink: /featured-pets/
 
 <section id="featured-pets" class="featured-pets">
   <div class="container flow">
-    <h2 class="section-title text-center featured-pets-title">Meet our Dogs</h2>
+    <h2 class="section-title text-center featured-pets-title"></h2>
 
+    <!-- Dogs Section -->
+    <h3 class="section-subtitle text-center">Meet our Dogs</h3>
     <div class="pets__list flow pets__list--grid">
       <div class="pet-card">
         <img src="/images/brown dog.jpg" alt="Brown and White Dog" class="pet-card__image image-with-border">

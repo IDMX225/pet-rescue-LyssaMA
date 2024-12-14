@@ -4,19 +4,11 @@ title: Contact Us
 permalink: /contact-us/
 ---
 
-  <!-- Full-width hero image -->
-  <div class="hero__image-container">
-    <img src="/images/side-view-rescue-dog-loving-affection-receives-from-woman-shelter.jpg" alt="Adorable puppy ready for adoption" class="hero__image">
-  </div>
-</section>
-
 <!-- Contact Section -->
 <section id="contact" class="contact">
   <div class="header-top">
     <div class="container">
       <div class="page-header__content">
-        <!-- Contact Title -->
-        <h2 class="site-title__main">Contact Us</h2>
       </div>
     </div>
   </div>
