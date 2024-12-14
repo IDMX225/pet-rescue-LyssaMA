@@ -18,10 +18,9 @@ layout: 'base.njk'
 
   <!-- Full-width hero image -->
   <div class="hero__image-container">
-    <img src="images/side-view-rescue-dog-loving-affection-receives-from-woman-shelter.jpg" alt="Adorable puppy ready for adoption" class="hero__image">
+    <img src="/images/side-view-rescue-dog-loving-affection-receives-from-woman-shelter.jpg" alt="Adorable puppy ready for adoption" class="hero__image">
   </div>
 </section>
-
 
 <section id="featured-pets" class="featured-pets">
   <div class="container flow">
@@ -31,7 +30,7 @@ layout: 'base.njk'
     <h3 class="section-subtitle text-center">Dogs</h3>
     <div class="pets__list flow pets__list--grid">
       <div class="pet-card">
-        <img src="images/brown dog.jpg" alt="Brown Dog" class="pet-card__image image-with-border">
+        <img src="/images/brown dog.jpg" alt="Brown Dog" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Max</h3>
         <p class="pet-card__description">A friendly dog with lots of energy and love to give.</p>
         <div class="pet-card__actions">
@@ -39,7 +38,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/bulldog.jpg" alt="Bulldog" class="pet-card__image image-with-border">
+        <img src="/images/bulldog.jpg" alt="Bulldog" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Charlie</h3>
         <p class="pet-card__description">A cute and calm bulldog looking for a companion.</p>
         <div class="pet-card__actions">
@@ -47,7 +46,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/grey and white dog.jpg" alt="Grey and White Dog" class="pet-card__image image-with-border">
+        <img src="/images/grey and white dog.jpg" alt="Grey and White Dog" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Daisy</h3>
         <p class="pet-card__description">An adorable dog with a sweet and gentle nature.</p>
         <div class="pet-card__actions">
@@ -55,7 +54,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/white dog.jpg" alt="White Dog" class="pet-card__image image-with-border">
+        <img src="/images/white dog.jpg" alt="White Dog" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Luna</h3>
         <p class="pet-card__description">A friendly and energetic dog looking for a new home.</p>
         <div class="pet-card__actions">
@@ -63,7 +62,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/yorkie.jpg" alt="Yorkie" class="pet-card__image image-with-border">
+        <img src="/images/yorkie.jpg" alt="Yorkie" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Toby</h3>
         <p class="pet-card__description">A tiny but brave yorkie with a big heart.</p>
         <div class="pet-card__actions">
@@ -76,7 +75,7 @@ layout: 'base.njk'
     <h3 class="section-subtitle text-center">Cats</h3>
     <div class="pets__list flow pets__list--grid">
       <div class="pet-card">
-        <img src="images/grey cat.jpg" alt="Grey Cat" class="pet-card__image image-with-border">
+        <img src="/images/grey cat.jpg" alt="Grey Cat" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Oliver</h3>
         <p class="pet-card__description">A calm and affectionate cat waiting to join your family.</p>
         <div class="pet-card__actions">
@@ -84,7 +83,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/Grey kitten.jpg" alt="Grey Kitten" class="pet-card__image image-with-border">
+        <img src="/images/Grey kitten.jpg" alt="Grey Kitten" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Milo</h3>
         <p class="pet-card__description">A playful kitten looking for a loving home.</p>
         <div class="pet-card__actions">
@@ -92,7 +91,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/orange cat.jpg" alt="Orange Cat" class="pet-card__image image-with-border">
+        <img src="/images/orange cat.jpg" alt="Orange Cat" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Sophie</h3>
         <p class="pet-card__description">An affectionate cat ready to be your companion.</p>
         <div class="pet-card__actions">
@@ -100,7 +99,7 @@ layout: 'base.njk'
         </div>
       </div>
       <div class="pet-card">
-        <img src="images/white and grey cat.jpg" alt="White and Grey Cat" class="pet-card__image image-with-border">
+        <img src="/images/white and grey cat.jpg" alt="White and Grey Cat" class="pet-card__image image-with-border">
         <h3 class="pet-card__name">Zoe</h3>
         <p class="pet-card__description">A charming cat waiting to be loved.</p>
         <div class="pet-card__actions">
@@ -110,4 +109,41 @@ layout: 'base.njk'
     </div>
   </div>
 </section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container flow">
+    <h2 class="section-title text-center">Get Involved</h2>
+    <p class="section-description text-center">
+      We’d love to hear from you! Whether you want to adopt, volunteer, or simply get involved, we're here to help.
+    </p>
+
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required class="form-control" placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required class="form-control" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required class="form-control" placeholder="Tell us how you’d like to get involved"></textarea>
+      </div>
+
+      <!-- Hidden Input for Netlify to handle form submissions -->
+      <input type="hidden" name="form-name" value="contact">
+
+      <button type="submit" class="btn btn--primary">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Smooth Scroll -->
+<script>
+  document.documentElement.style.scrollBehavior = 'smooth';
+</script>
 
