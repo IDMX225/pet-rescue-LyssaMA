@@ -178,6 +178,7 @@ section,
 /* Featured Pets Section */
 .featured-pets {
   margin-top: 0rem;
+  font-size: x-large;
 }
 
 /* //////////////////////
@@ -197,6 +198,8 @@ section,
 .pet-card__image {
   width: 100%;
   height: auto;
+  border: #ffffff;
+
 }
 
 .section-subtitle {
@@ -395,48 +398,66 @@ section,
   }
 }
 
+/* Base button styles */
 .btn {
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  line-height: 1;
-  padding: var(--space-md) var(--space-xl);
-  border-radius: var(--radius-sm);
-  align-self: start;
-  justify-self: start;
+  cursor: pointer;                           /* Pointer cursor on hover */
+  text-decoration: none;                      /* No underlines for links */
+  display: inline-block;                      /* Inline block for positioning */
+  line-height: 1;                             
+  padding: var(--space-md) var(--space-xl);   
+  border-radius: var(--radius-sm);            
+  align-self: start;                         
+  justify-self: start;                        
+  transition: background-color 0.3s ease, transform 0.2s ease;  
 }
 
+/* Focus styles for all buttons */
 .btn:focus {
-  outline: 0.125em solid var(--color-primary);
-  outline-offset: 0.25em;
+  outline: 0.125em solid var(--color-primary);  
+  outline-offset: 0.25em;                      
 }
 
+/* Primary Button Styles */
 .btn--primary {
-  background: var(--color-accent);
-  color: var(--color-neutral-100);
-  font-weight: var(--font-weight-bold);
-  border: 2px solid var(--color-accent);
+  background-color: var(--color-accent);      
+  color: var(--color-neutral-100);            
+  padding: var(--space-md) var(--space-lg);  
+  border: none;                              
+  border-radius: var(--radius-md);            
+  font-size: var(--font-size-lg);            
+  font-weight: var(--font-weight-bold);      
+  cursor: pointer;                        
 }
 
-.btn--primary:hover,
+/* Hover and Focus States for Primary Button */
+.btn--primary:hover {
+  background-color: var(--color-secondary);  
+  transform: scale(1.05);                    
+}
+
 .btn--primary:focus {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  outline: 2px solid var(--color-primary);   
 }
 
+/* Neutral Button Styles */
 .btn--neutral {
-  background-color: var(--color-neutral-100);
-  color: var(--color-neutral-700);
-  font-weight: var(--font-weight-bold);
-  border: 2px solid var(--color-neutral-700);
+  background-color: var(--color-neutral-100); 
+  color: var(--color-neutral-700);            
+  font-weight: var(--font-weight-bold);       
+  border: 2px solid var(--color-neutral-700); 
 }
 
-.btn--neutral:hover,
+/* Hover and Focus States for Button */
+.btn--neutral:hover {
+  color: var(--color-neutral-100);            
+  background-color: var(--color-neutral-700); 
+}
+
 .btn--neutral:focus {
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-700);
+  background-color: var(--color-neutral-700); 
+  color: var(--color-neutral-100);           
+  border-color: var(--color-neutral-100);     
 }
-
 /* //////////////////////
   Responsiveness
 ////////////////////// */
@@ -555,59 +576,67 @@ section,
   margin-top: var(--space-lg);
 }
 
-.form-container {
-  background-color: var(--color-neutral-200); 
-  padding: var(--space-lg);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* General Styles for Contact Page */
+.contact-logo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Form container for Contact Page */
+.contact-form-container {
+  margin-top: 40px;
   max-width: 600px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.form-field {
-  margin-bottom: var(--space-md);
+.contact-form-field {
+  margin-bottom: 15px;
 }
 
-.form-field label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: var(--font-weight-bold);
+.contact-form-field label {
+  font-weight: bold;
 }
 
-.form-field input,
-.form-field textarea {
+.contact-form-field input, .contact-form-field textarea {
   width: 100%;
-  padding: var(--space-sm);
-  border: 1px solid var(--color-neutral-500);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-md);
-  margin-top: 0.5rem;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.form-btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--space-lg);
-}
-
-.btn--primary {
-  background-color: var(--color-accent); 
-  color: var(--color-neutral-100);
-  padding: var(--space-md) var(--space-lg);
+/* Submit Button on Contact Page */
+.contact-form .btn--primary {
+  background-color: #ec865d; 
   border: none;
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-lg);
+  color: white;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn--primary:hover {
-  background-color: var(--color-secondary);
-  transform: scale(1.05);
+.contact-form .btn--primary:hover {
+  background-color: #c7582d; 
 }
 
-.btn--primary:focus {
-  outline: 2px solid var(--color-primary);
+/* Form button container  */
+.contact-form-btn-container {
+  text-align: center;
 }
 
 /* Responsiveness */

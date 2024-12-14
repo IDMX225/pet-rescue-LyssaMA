@@ -27,7 +27,7 @@ layout: 'base.njk'
     <h2 class="section-title text-center featured-pets-title">Featured Pets</h2> <!-- Increased text size -->
 
     <!-- Dogs Section -->
-    <h3 class="section-subtitle text-center">Dogs</h3>
+    <h3 class="section-subtitle text-center">Meet our dogs</h3>
     <div class="pets__list flow pets__list--grid">
       <div class="pet-card">
         <img src="/images/brown dog.jpg" alt="Brown Dog" class="pet-card__image image-with-border">
@@ -118,7 +118,7 @@ layout: 'base.njk'
       We’d love to hear from you! Whether you want to adopt, volunteer, or simply get involved, we're here to help.
     </p>
 
-    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <form action="/submit-contact-form" method="POST" class="contact-form">
       <div class="form-group">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required class="form-control" placeholder="Enter your name">
@@ -131,11 +131,8 @@ layout: 'base.njk'
 
       <div class="form-group">
         <label for="message">Your Message</label>
-        <textarea id="message" name="message" required class="form-control" placeholder="Tell us how you’d like to get involved"></textarea>
+        <textarea id="message" name="message" required class="form-control" placeholder="Tell us how you’d like to get involved."></textarea>
       </div>
-
-      <!-- Hidden Input for Netlify to handle form submissions -->
-      <input type="hidden" name="form-name" value="contact">
 
       <button type="submit" class="btn btn--primary">Submit</button>
     </form>
@@ -143,7 +140,69 @@ layout: 'base.njk'
 </section>
 
 <!-- Smooth Scroll -->
-<script>
-  document.documentElement.style.scrollBehavior = 'smooth';
-</script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 
+<!-- Contact Form CSS -->
+<style>
+  .contact {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+  }
+
+  .contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .contact .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+
+  .contact-form .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .contact-form .form-control:focus {
+    border-color: #5cb85c;
+    outline: none;
+  }
+
+  .contact-form button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover {
+    background-color: #4cae4c;
+  }
+
+  .contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>
