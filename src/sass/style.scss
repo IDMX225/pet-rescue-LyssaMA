@@ -78,6 +78,13 @@
 }
 
 /* General Styling */
+
+.container {
+  padding: 0 15px; 
+  margin-inline: auto;
+  max-width: 80ch; 
+}
+
 body {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 2rem;
@@ -99,6 +106,13 @@ h2, h3 {
 strong {
   font-weight: bold;
 }
+
+p, li {
+  padding-inline: max(1rem, 1vw);
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
 
 /* Flex and Grid Layouts */
 .flex-group {
@@ -207,16 +221,16 @@ strong {
 .btn--adopt {
   background-color: #f4a261;
   color: white;
-  padding: 20px 0px;
+  padding: 0 20px; /* Horizontal padding of 20px */
   text-align: center;
   border-radius: 25px !important;
   text-decoration: none;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  
+  align-items: center;     
   font-size: 16px;
   min-width: 120px;
-  height: 20px;
+  height: 40px;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -579,6 +593,10 @@ header, .site-footer {
 @media (max-width: 767px) {
   .hamburger-menu {
     display: block;
+  }
+
+  .container {
+    padding-inline: 1rem;
   }
 
   .nav-list {
